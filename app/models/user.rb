@@ -12,6 +12,8 @@ class User < ApplicationRecord
   validates :occupation_id,  numericality: { other_than: 1 }
   validates :profile,        presence: true
 
+  has_many :posts
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :gender
   belongs_to :age
@@ -19,5 +21,4 @@ class User < ApplicationRecord
   belongs_to :now_weight
   belongs_to :occupation
 
-  has_many :posts
 end

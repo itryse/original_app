@@ -1,0 +1,26 @@
+<%= form_with model: @post, local: true do |f|%>
+
+  <div class="field">
+    <%= f.label :title, "今日のひとこと" %><br />
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :today_weight, "今日の体重" %><br />
+    <%= f.text_area :today_weight, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :today_comment, "今日の反省" %><br />
+    <%= f.text_area :today_comment, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "今日の画像" %><br />
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>

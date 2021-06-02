@@ -15,11 +15,13 @@
           <p>＊「こんにちは。なにをしますか？」</p>
         </div>
       <% end %>
+      <%= render partial: "post" , collection: @posts %>
       <div class="clearfix">
         <div class="blackboard answer float-r">
           <p><%= link_to "ぼうけんをはじめる", new_user_registration_path, class:"blink-before" %></p>
           <p><%= link_to "つづきからはじめる", new_user_session_path, class:"blink-before" %></p>
           <p><%= link_to "ちゅうだんする", destroy_user_session_path, method: :delete , class:"blink-before" %></p>
+          <p><%= link_to "とうこうする", new_post_path, class:"blink-before" %></p>
           <p><%= link_to "コメントをする", root_path, class:"blink-before" %></p>
         </div>
       </div>
