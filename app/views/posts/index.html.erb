@@ -1,0 +1,22 @@
+<main class="main">
+  <head>
+    <meta charset="UTF-8">
+    <title>オリジナルアプリ</title>
+  </head>
+  <body>
+    <div class="inner">
+      <%= image_tag "dqwalk.jpeg", class:"list-pict" %>
+      <div class="blackboard question">
+        <p>＊「こんにちは、ゆうしゃさん。なにをしますか？」</p>
+      </div>
+      <div class="clearfix">
+        <div class="blackboard answer float-r">
+          <p><%= link_to "冒険をはじめる", new_user_registration_path, class:"blink-before" %></p>
+          <p><%= link_to "つづきからはじめる", new_user_session_path, class:"blink-before" %></p>
+          <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete , class:"blink-before" %></p>
+          <p><%= link_to "コメントをみる", root_path, class:"blink-before" %></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</main>
