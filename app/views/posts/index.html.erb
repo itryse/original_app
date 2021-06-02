@@ -6,15 +6,21 @@
   <body>
     <div class="inner">
       <%= image_tag "dqwalk.jpeg", class:"list-pict" %>
-      <div class="blackboard question">
-        <p>＊「こんにちは、ゆうしゃさん。なにをしますか？」</p>
-      </div>
+      <% if user_signed_in?%>
+        <div class="blackboard question">
+          <p><%= "＊「ゆうしゃ #{current_user.nickname}さん。なにをしますか？」" %></p>
+        </div>
+      <% else %>
+        <div class="blackboard question">
+          <p>＊「こんにちは。なにをしますか？」</p>
+        </div>
+      <% end %>
       <div class="clearfix">
         <div class="blackboard answer float-r">
-          <p><%= link_to "冒険をはじめる", new_user_registration_path, class:"blink-before" %></p>
+          <p><%= link_to "ぼうけんをはじめる", new_user_registration_path, class:"blink-before" %></p>
           <p><%= link_to "つづきからはじめる", new_user_session_path, class:"blink-before" %></p>
-          <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete , class:"blink-before" %></p>
-          <p><%= link_to "コメントをみる", root_path, class:"blink-before" %></p>
+          <p><%= link_to "ちゅうだんする", destroy_user_session_path, method: :delete , class:"blink-before" %></p>
+          <p><%= link_to "コメントをする", root_path, class:"blink-before" %></p>
         </div>
       </div>
     </div>

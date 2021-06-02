@@ -18,4 +18,6 @@ class User < ApplicationRecord
   belongs_to :goal_weight
   belongs_to :now_weight
   belongs_to :occupation
+
+  has_many :posts
 end

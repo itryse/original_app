@@ -1,6 +1,14 @@
 class PostsController < ApplicationController
 
   def index
-    # @posts = Post.order("created_at DESC")
+    # @posts = Post.all
   end
+
+  def new
+    # @post = Post.new
+  end
+
+  def create
+  end
+
 end
