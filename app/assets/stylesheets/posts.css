@@ -14,7 +14,7 @@
   margin: 0 30px;
   padding: 25px 30px;
   font-size: 20px;
-  color: white;
+  color: pink;
   border: 2px solid black;
   border-radius: 5px;
   box-shadow: 0 0 0 4px wheat inset;
@@ -174,4 +174,9 @@
   color: white;
   background-color: orange;
   display: block;
+}
+
+.item-lists {
+  display: flex;
+  justify-content: center;
 }
