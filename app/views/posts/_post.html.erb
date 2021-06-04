@@ -1,8 +1,9 @@
 <div class="card">
-    <%= image_tag(post.image, class: :card__img) %>
+    <%= link_to image_tag(post.image, class: :card__img), post_path(post.id) %>
   <div class="card__body">
     <%= post.title %>
-    <p class="card__summary"><%= post.today_weight %></p>
-    <p class="card__summary"><%= post.today_comment %></p>
+    <%= post.today_weight %>
+    <%= post.today_comment %>
+    <%= link_to "by #{post.user.nickname}" %>
   </div>
 </div>

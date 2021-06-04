@@ -1,76 +1,177 @@
 /* リセットCSS */
 
+ .list-pict {
+  position: absolute;
+  background-image: url(dqwalk.jpeg);
+  width: 100vw;
+  height: 100%;
+
+ }
+
  .blackboard {
   position: relative;
-  margin: 0 auto 1.5rem;
-  padding: 2rem 1rem;
-  font-size: 1.2rem;
-  color: #fff;
-  border: 2px solid #000;
+  top: 20px;
+  margin: 0 30px;
+  padding: 25px 30px;
+  font-size: 20px;
+  color: white;
+  border: 2px solid black;
   border-radius: 5px;
-  box-shadow: 0 0 0 4px #fff inset;
-  background-color: rgba(0,0,0,0.9);
+  box-shadow: 0 0 0 4px wheat inset;
+  background-color: black;
  }
+
  .blackboard.answer p {
-  margin-left: 1.7rem;
+  margin-left: 28px;
  }
+
  .blackboard .blink-before {
-  font-size: 1.2rem;
+  font-size: 20px;
  }
+
  .blackboard a {
   text-decoration: none;
-  color: #fff;
+  color: white;
  }
+
  .blackboard .blink-before::before {
   content: '▶';
   position: absolute;
-  left: 1rem;
-  animation: blink 1.4s infinite;
+  left: 25px;
+  animation: blink 2.0s infinite;
  }
- .blackboard p:last-of-type {
-  margin-bottom: 0;
- }
- /* 回り込み */
+
  .float-r {
-  float: right;
+  float: left;
+  margin-top: 15px;
  }
+
  /* 回り込み解除 */
- .clearfix {
+ /* .clearfix {
   zoom: 1;
- }
- .clearfix:after {
+ } */
+
+ /* .clearfix:after {
   clear: both;
   content: "";
-  display: block;
- }
- /* 点滅 */
+  display: block; */
+ /* } */
+
  @keyframes blink {
   50% { opacity: 0; }
  }
+
  @-webkit-keyframes blink {
   50% { opacity: 0; }
  }
 
- .body {
-   background-color: aqua;
- }
-
- .list-pict {
-   position: absolute;
-   width: 100%;
-   height: 100%;
- }
-
  .start {
-   font-size: 45px;
+   font-size: 38px;
    margin-left: auto;
    margin-right: auto;
+ }
+
+ .page-heading {
+  position: relative;
+  top: 20px;
+  margin: 0 30px;
+  padding: 25px 30px;
+  font-size: 20px;
+  color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 0 0 0 4px wheat inset;
+  background-color: black;
  }
 
  .field {
    font-size: 16px;
-   width: 200px;
-   height: 50px;
-   margin-left: auto;
-   margin-right: auto;
+   width: 300px;
+   height: 100px;
  }
+
+ .card__body {
+   font-size: 20px;
+   z-index: 30;
+ }
+
+ .content {
+   background-color: lightblue;
+   margin: 10px 0;
+   font-size: 15px;
+ }
+
+ .registration-new-select {
+   font-size: 15px;
+   width: 33%;
+   height: 80%;
+ }
+
+ .registration-new-profile {
+   font-size: 15px;
+   width: 40%;
+   height: 120%;
+ }
+
+.registration-new-submit {
+  width: 25%;
+  height: 30px;
+}
+
+/* body,html {
+  margin: 0;
+  padding: 0;
+}
+
+.img {
+  position: relative;
+  background-image:url("dqwalk.jpeg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.img::before {
+  content:  '';
+  display: block;
+  padding-top: 50%;
+} */
+
+.contact {
+  height: 800px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  width: 600px;
+}
+
+.name-form {
+  margin-bottom: 10px;
+}
+
+.message-form {
+  height: 150px;
+  margin-bottom: 30px;
+}
+
+.name-form,
+.message-form {
+  width: 500px;
+  padding: 15px;
+  border: 1px solid white;
+  display: block;
+}
+
+.send {
+  width: 200px;
+  padding: 15px;
+  border: 1px solid white;
+  color: white;
+  background-color: orange;
+  display: block;
+}
