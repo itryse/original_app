@@ -5,7 +5,6 @@
   background-image: url(dqwalk.jpeg);
   width: 100vw;
   height: 100%;
-
  }
 
  .blackboard {
@@ -92,7 +91,6 @@
 
  .card__body {
    font-size: 20px;
-   z-index: 30;
  }
 
  .content {
@@ -167,16 +165,17 @@
   display: block;
 }
 
-.send {
-  width: 200px;
-  padding: 15px;
-  border: 1px solid white;
-  color: white;
-  background-color: orange;
-  display: block;
+/* トップページの写真の大きさ及びコメントの配置など */
+.item-lists {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
 }
 
-.item-lists {
-  display: flex;
-  justify-content: center;
+/* トップページのイメージの大きさの調整 */
+.item-image {
+  width: 90%;
 }

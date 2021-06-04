@@ -44,6 +44,7 @@ a {
 .inner {
   width: 1024px;
   margin: 0 auto;
+  z-index: 0;
 }
 .nav {
   width: 100%;
