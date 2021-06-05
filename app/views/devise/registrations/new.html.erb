@@ -4,69 +4,55 @@
 
   <%= render "devise/shared/error_messages", resource: resource %>
 
+  <div class="position">
+
     <div class="field">
       <%= f.label :nickname, "ユーザー名" %><br/>
-      <%= f.text_field :nickname, id:"user_nickname" %>
+      <%= f.text_field :nickname, id:"user_nickname", class:"name-form" %>
     </div>
 
     <div class="field">
       <%= f.label :email, "メールアドレス" %><br/>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"name-form" %>
     </div>
 
     <div class="field">
       <%= f.label :password, "パスワード" %><br/>
-      <%= f.password_field :password, autocomplete: "new-password" %>
+      <%= f.password_field :password, autocomplete: "new-password", class:"name-form" %>
     </div>
 
     <div class="field">
       <%= f.label :password_confirmation, "パスワード(確認)" %><br/>
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"name-form" %>
     </div>
 
     <div class="field">
       <%= f.label :gender, "性別" %><br/>
-      <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"registration-new-select"}) %>
+      <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"name-form"}) %>
     </div>
 
     <div class="field">
       <%= f.label :age, "年齢" %><br/>
-      <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"registration-new-select"}) %>
-    </div>
-
-    <div class="field">
-      <%= f.label :goal_weight, "目標の体重" %><br/>
-      <%= f.collection_select(:goal_weight_id, GoalWeight.all, :id, :name, {}, {class:"registration-new-select"}) %>
-    </div>
-
-    <div class="field">
-      <%= f.label :now_weight, "現在の体重" %><br/>
-      <%= f.collection_select(:now_weight_id, NowWeight.all, :id, :name, {}, {class:"registration-new-select"}) %>
+      <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"name-form"}) %>
     </div>
 
     <div class="field">
       <%= f.label :occupation, "職業" %><br/>
-      <%= f.collection_select(:occupation_id, Occupation.all, :id, :name, {}, {class:"registration-new-select"}) %>
+      <%= f.collection_select(:occupation_id, Occupation.all, :id, :name, {}, {class:"name-form"}) %>
     </div>
 
     <div class="field">
       <%= f.label :profile, "自己紹介" %><br/>
-      <%= f.text_area :profile, id:"user_profile", class:"registration-new-profile", placeholder:"例）一生懸命頑張りたいと思います！" %>
+      <%= f.text_area :profile, id:"user_profile", class:"message-form", placeholder:"例）一生懸命頑張りたいと思います！" %>
     </div>
 
     <div class="actions"><br/>
-      <%= f.submit "新規登録", class:"registration-new-submit" %>
+      <%= f.submit "新規登録", class:"name-form" %>
     </div>
+
+  </div>
 
 <% end %>
 
 <%= render "devise/shared/links" %>
-
-    <div class="contact">
-      <form class="contact-form">
-        <input type="text" placeholder="ユーザー名" class="name-form">
-        <textarea name="message" placeholder="MESSAGE" class="message-form"></textarea>
-      </form>
-    </div>
-
 

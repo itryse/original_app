@@ -4,7 +4,7 @@
     <title>オリジナルアプリ</title>
   </head>
   <body>
-  <%# <%= image_tag "dqwalk.jpeg", class:"list-pict" %> %>
+      <%# <%= image_tag "dqwalk.jpeg", class:"list-pict" %>
       <% if user_signed_in? %>
         <div class="blackboard">
           <p><%= "＊「こんにちは、ゆうしゃ #{current_user.nickname}さん。」" %></p>
@@ -23,7 +23,6 @@
           <p><%= link_to "つづきからはじめる", new_user_session_path, class:"blink-before" %></p>
         <% end %>
       </div>
-    
       <%# <投稿情報はここに表示> %>
       <div class="item-lists">
         <% @posts.each do |post| %>
