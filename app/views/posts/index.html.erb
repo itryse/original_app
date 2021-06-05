@@ -7,7 +7,7 @@
       <%# <%= image_tag "dqwalk.jpeg", class:"list-pict" %>
       <% if user_signed_in? %>
         <div class="blackboard">
-          <p><%= "＊「こんにちは、ゆうしゃ #{current_user.nickname}さん。」" %></p>
+          <p><%= "＊「こんにちは、#{current_user.nickname}さん。」" %></p>
         </div>
       <% else %>
         <div class="blackboard">
@@ -30,9 +30,9 @@
             <%= link_to image_tag(post.image, class: :card__img), post_path(post.id) %>
             <li class="card__body">
               <%= post.title %><br />
-              <%= post.today_weight %><br />
-              <%= post.today_comment %><br />
-              <%= link_to "by #{post.user.nickname}" %>
+              <%= post.target_time %><br />
+              <%= post.genre %><br />
+              <%= link_to "#{post.user.nickname}" %>
             </li>
           </ul>
         <% end %>

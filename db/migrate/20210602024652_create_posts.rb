@@ -3,8 +3,8 @@ class CreatePosts < ActiveRecord::Migration[6.0]
     create_table :posts do |t|
 
       t.string :title
-      t.integer :today_weight
-      t.text :today_comment
+      t.string :target_time
+      t.text :genre
       t.references :user, foreign_key: true
       t.timestamps
     end

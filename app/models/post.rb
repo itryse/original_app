@@ -3,6 +3,6 @@ class Post < ApplicationRecord
   has_one_attached :image
 
   validates :title, presence: true
-  validates :today_weight, presence: true
-  validates :today_comment, presence: true
+  validates :target_time, presence: true
+  validates :genre, presence: true
 end

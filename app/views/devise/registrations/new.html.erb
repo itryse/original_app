@@ -37,11 +37,6 @@
     </div>
 
     <div class="field">
-      <%= f.label :occupation, "職業" %><br/>
-      <%= f.collection_select(:occupation_id, Occupation.all, :id, :name, {}, {class:"name-form"}) %>
-    </div>
-
-    <div class="field">
       <%= f.label :profile, "自己紹介" %><br/>
       <%= f.text_area :profile, id:"user_profile", class:"message-form", placeholder:"例）一生懸命頑張りたいと思います！" %>
     </div>

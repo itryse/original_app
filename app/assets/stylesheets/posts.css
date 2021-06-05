@@ -60,19 +60,6 @@
    margin-right: auto;
  }
 
- .page-heading {
-  position: relative;
-  top: 20px;
-  margin: 0 30px;
-  padding: 25px 30px;
-  font-size: 20px;
-  color: white;
-  border: 2px solid black;
-  border-radius: 5px;
-  box-shadow: 0 0 0 4px wheat inset;
-  background-color: black;
- }
-
  .field {
    font-size: 16px;
    width: 300px;
@@ -130,40 +117,8 @@
   padding-top: 50%;
 } */
 
-.contact {
-  height: 800px;
-  background-color: lightgray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-form {
-  width: 600px;
-}
-
 .field {
   margin-left: 100px;
-}
-
-/* 新規登録画面の実装 */
-.name-form {
-}
-
-/* 新規登録画面の実装 */
-.message-form {
-  height: 100px;
-  margin-bottom: 30px;
-}
-
-/* 新規登録画面の実装 */
-.name-form,
-.message-form {
-  margin-left: 200px;
-  width: 500px;
-  padding: 15px;
-  border: 1px solid black;
-  display: block;
 }
 
 /* トップページの写真の大きさ及びコメントの配置など */

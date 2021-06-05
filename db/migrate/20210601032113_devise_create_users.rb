@@ -9,9 +9,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string  :encrypted_password,  null: false, default: ""
       t.integer :gender_id,           null: false
       t.integer :age_id,              null: false
-      t.integer :goal_weight_id,      null: false
-      t.integer :now_weight_id,       null: false
-      t.integer :occupation_id,       null: false
       t.text    :profile,             null: false
 
 

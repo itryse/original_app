@@ -7,9 +7,6 @@ class User < ApplicationRecord
   validates :nickname,       presence: true
   validates :gender_id,      numericality: { other_than: 1 }
   validates :age_id,         numericality: { other_than: 1 }
-  validates :goal_weight_id, numericality: { other_than: 1 }
-  validates :now_weight_id,  numericality: { other_than: 1 }
-  validates :occupation_id,  numericality: { other_than: 1 }
   validates :profile,        presence: true
 
   has_many :posts
@@ -17,8 +14,5 @@ class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :gender
   belongs_to :age
-  belongs_to :goal_weight
-  belongs_to :now_weight
-  belongs_to :occupation
 
 end

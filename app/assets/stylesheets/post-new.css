@@ -1,0 +1,66 @@
+.contact {
+  height: 800px;
+  background-color: lightgoldenrodyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* テキスト全体を修飾 */
+.contact-form {
+  width: 600px;
+}
+
+ /* 新規投稿画面の実装 */
+ .page-heading {
+ width: 600px;
+ text-align: center;
+ padding: 25px 30px;
+ color: black;
+ border: 2px solid white;
+ border-radius: 5px;
+ box-shadow: 0 0 0 5px white;
+ background-color: red;
+}
+
+/* 私の目標、いつまでに？を修飾 */
+.name-form {
+  margin: 0 auto 10px;
+  border-radius: 5px;
+}
+
+/* ひとことコメントを修飾 */
+.message-form {
+  height: 150px;
+  margin: 0 auto 30px;
+  border-radius: 5px;
+}
+
+.name-form,
+.message-form {
+  width: 500px;
+  padding: 15px;
+  border: 1px solid black;
+  display: block;
+}
+
+.send {
+  width: 200px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid black;
+  color: white;
+  background-color: skyblue;
+  display: block;
+}
+
+.inner {
+  width: 1024px;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+.blue {
+  color: red;
+  font-size: 15px;
+}
