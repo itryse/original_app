@@ -11,6 +11,7 @@
           <%= link_to "削除", post_path(@post), method: :delete, class: :prototype__btn %>
         </div>
       <% end %>
+
       <div class="prototype__image">
         <%= image_tag @post.image %>
       </div>
@@ -28,10 +29,9 @@
           </p>
         </div>
       </div>
-        <%= link_to "#{@post.user.nickname}", class: :prototype__user %>
       <div class="prototype__comments">
         <% if user_signed_in? %>
-          <%= form_with model: [@post], local: true do |f|%>
+          <%= form_with model: [@post, @comment], local: true do |f|%>
             <div class="field">
               <%= f.label :text, "コメント" %><br />
               <%= f.text_field :text %>
@@ -41,14 +41,15 @@
             </div>
           <% end %> 
         <% end %>
-        <%# <ul class="comments_lists">
+        <ul class="comments_lists">
+          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
           <% @comments.each do |comment| %>
-            <%# <li class="comments_list">
-              <%= comment.text%>
-              <%# <%= link_to "（#{comment.user.name}）", user_path(comment.user), class: :comment_user %>
-            <%# </li>
+            <li class="comments_list">
+              <%= link_to comment.user.nickname, "/users/#{comment.user_id}", class: :comment_user %>
+              <%= comment.text %>
+            </li>
           <% end %>
-        <%# </ul> %>
+        </ul>
       </div>
     </div>
   </div>

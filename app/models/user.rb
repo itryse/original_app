@@ -10,6 +10,7 @@ class User < ApplicationRecord
   validates :profile,        presence: true
 
   has_many :posts
+  has_many :comments
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :gender
