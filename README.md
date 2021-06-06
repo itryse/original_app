@@ -1,7 +1,7 @@
 # newRead
 概要
 
-## Appname
+## App name
 アプリケーション名
 My Goal
 
