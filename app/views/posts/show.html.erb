@@ -4,7 +4,7 @@
       <p class="prototype__hedding">
         <%= @post.title %>
       </p>
-      <%= link_to "#{@post.user.nickname}", class: :prototype__user %>
+
       <% if current_user == @post.user%>
         <div class="prototype__manage">
           <%= link_to "編集", edit_post_path(@post), class: :prototype__btn %>
@@ -28,6 +28,7 @@
           </p>
         </div>
       </div>
+        <%= link_to "#{@post.user.nickname}", class: :prototype__user %>
       <div class="prototype__comments">
         <% if user_signed_in? %>
           <%= form_with model: [@post], local: true do |f|%>

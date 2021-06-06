@@ -54,21 +54,6 @@ a {
 .logo {
   width: 200px;
 }
-.nav__btn{
-  display: inline-block;
-  padding: 0.4em 1.6em;
-  font-size: 0.8em;
-  color: #87CEFA;
-  text-decoration: none;
-  user-select: none;
-  border: 1px #87CEFA solid;
-  border-radius: 3px;
-  transition: 0.4s ease;
-}
-.nav__btn:hover{
-  color: #fff;
-  background: #87CEFA;
-}
 
 .nav__logout{
   display: inline-block;
@@ -145,10 +130,11 @@ a {
 }
 .prototype__user{
   display: block;
-  font-size: 16px;
+  font-size: 50px;
   color: #999;
-  text-align: center;
   text-decoration: underline;
+  text-align: center;
+
 }
 .prototype__image{
   width: 40%;
@@ -239,6 +225,7 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
