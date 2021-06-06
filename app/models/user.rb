@@ -9,7 +9,7 @@ class User < ApplicationRecord
   validates :age_id,         numericality: { other_than: 1 }
   validates :profile,        presence: true
 
-  has_many :posts
+  has_many :posts, dependent: :destroy
   has_many :comments
 
   extend ActiveHash::Associations::ActiveRecordExtensions
