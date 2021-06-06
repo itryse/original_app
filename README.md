@@ -1,6 +1,21 @@
+# newRead
+概要
+
+## Description
+詳細の説明
+
+## Usage
+用途
+
+## Install
+インストール方法
+
+
+
 # テーブル設計
 -----
 # users
+
 | Column             | Type      | Options                         |
 | ------------------ | --------- | ------------------------------- |
 | nickname           | string    | null : false                    |
