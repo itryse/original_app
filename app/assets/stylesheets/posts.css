@@ -3,55 +3,9 @@
 /* トップページ背景画像 */
  .list-pict {
   position: absolute;
-  background-image: url(dqwalk.jpeg);
+  background-image: url(mohammad-alizade-fKjJYw1vOf8-unsplash.jpg);
   width: 100vw;
   height: 100%;
- }
-
- .blackboard {
-  position: relative;
-  top: 20px;
-  margin: 0 30px;
-  padding: 25px 30px;
-  font-size: 20px;
-  color: pink;
-  border: 2px solid black;
-  border-radius: 5px;
-  box-shadow: 0 0 0 4px wheat inset;
-  background-color: black;
- }
-
- .blackboard.answer p {
-  margin-left: 28px;
- }
-
- .blackboard .blink-before {
-  font-size: 20px;
- }
-
- .blackboard a {
-  text-decoration: none;
-  color: white;
- }
-
- .blackboard .blink-before::before {
-  content: '▶';
-  position: absolute;
-  left: 25px;
-  animation: blink 2.0s infinite;
- }
-
- .float-r {
-  float: left;
-  margin-top: 15px;
- }
-
- @keyframes blink {
-  50% { opacity: 0; }
- }
-
- @-webkit-keyframes blink {
-  50% { opacity: 0; }
  }
 
  .start {
@@ -123,7 +77,8 @@
 
 /* トップページの写真の大きさ及びコメントの配置など */
 .item-lists {
-  width: 100vw;
+  position: relative;
+  display: inline-block;
   display: flex;
   justify-content: space-around;
   margin-top: 200px;
@@ -133,6 +88,9 @@
 }
 
 /* トップページのイメージの大きさの調整 */
-.item-image {
-  width: 80%;
+.card__body {
+  display: inline-block;
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
 }

@@ -1,0 +1,50 @@
+.header {
+  background-color: lightskyblue;
+  margin-bottom: 48px;
+  padding: 20px 0;
+}
+
+.inner {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 100px;
+}
+
+.page-head {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  width: calc((100% - 50px) / 3);
+  margin-bottom: 40px;
+}
+
+.card__img {
+  margin-bottom: 16px;
+}
+
+.card__summary {
+  font-size: 16px;
+}
+
+.footer {
+  background-color: #999;
+  padding: 10px 0;
+}
+
+.copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+}

@@ -17,10 +17,10 @@
  text-align: center;
  padding: 25px 30px;
  color: black;
- border: 2px solid white;
+ border: 2px solid black;
  border-radius: 5px;
  box-shadow: 0 0 0 5px white;
- background-color: red;
+ background-color: lightpink;
 }
 
 /* 私の目標、いつまでに？を修飾 */
@@ -52,12 +52,6 @@
   color: white;
   background-color: skyblue;
   display: block;
-}
-
-.inner {
-  width: 1024px;
-  margin: 0 auto;
-  z-index: 0;
 }
 
 .blue {

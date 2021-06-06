@@ -1,88 +1,42 @@
-<div class="main">
-  <div class="inner">
-    <div class="form__wrapper">
-      <h1 class="page-heading">宣言する</h1>
-      <%= form_with model: @post, local: true do |f|%>
-
-        <ul class="item-lists">
-          <li class="lists">
-
-            <div class="field">
-              <%= f.label :title, "私の目標" %><br />
-              <%= f.text_field :title %>
-            </div>
-
-            <div class="field">
-              <%= f.label :target_time, "目標達成時期" %><br />
-              <%= f.text_area :target_time, class: :form__text %>
-            </div>
-
-            <div class="field">
-              <%= f.label :gender, "ジャンル" %><br />
-              <%= f.text_area :genre, class: :form__text %>
-            </div>
-
-            <div class="field">
-              <%= f.label :image, "画像"%><br />
-              <%= f.file_field :image %>
-            </div>
-
-            <div class="actions">
-              <%= f.submit "投稿する", class: :form__btn  %>
-            </div>
-
-          </li>
-       </ul>
-     <% end %>
-    </div>
-  </div>
-</div>
-
 <div class="items-sell-contents">
   <header class="items-sell-header">
-
   </header>
   <div class="items-sell-main">
-    <%= form_with model: @product, local: true do |f| %>
+    <%= form_with model: @post, local: true do |f| %>
 
-    <%# 商品画像 %>
-    <div class="img-upload">
-      <div class="weight-bold-text">
-        目標達成シート
-        <span class="indispensable">必須</span>
-      </div>
-      <div class="click-upload">
-        <p>
-          クリックしてファイルをアップロード
-        </p>
-        <%= f.file_field :image, id:"item-image" %>
-      </div>
-    </div>
-    <%# /商品画像 %>
-    <%# 商品名と商品説明 %>
-    <div class="new-items">
-      <div class="weight-bold-text">
-        私の目標達成
-        <span class="indispensable">必須</span>
-      </div>
-      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"あなたの目標を教えてください", maxlength:"40" %>
-      <div class="items-explain">
+      <div class="new-items">
+
         <div class="weight-bold-text">
-          目標達成時期
-          <span class="indispensable">必須</span>
+          目標
         </div>
-        <%= f.text_area :introduction, class:"items-text", id:"item-info", placeholder:"目標達成時期を教えてください。（例）今年の12月までに10キロのダイエットする！" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"転職先に内定をいただく！", maxlength:"40" %>
+        
+        <div class="items-explain">
+          <div class="weight-bold-text">
+            目標達成時期
+          </div>
+          <%= f.text_area :target_time, class:"items-text", id:"item-info", placeholder:"今年の8月末まで" ,rows:"2" ,maxlength:"150" %>
+        </div>
+
+        <div class="items-explain">
+          <div class="weight-bold-text">
+            ジャンル
+          </div>
+          <%= f.text_area :genre, class:"items-text", id:"item-info", placeholder:"仕事" ,rows:"2", maxlength:"100" %>
+        </div>
       </div>
-    </div>
-    <%# /商品名と商品説明 %>
 
-    <%# 下部ボタン %>
-    <div class="sell-btn-contents">
-      <%= f.submit "新規投稿する" ,class:"sell-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
-    </div>
-    <%# /下部ボタン %>
+      <div class="img-upload">
+        <div class="click-upload">
+          <p>写真をアップロード</p>
+          <%= f.file_field :image, id:"item-image" %>
+        </div>
+      </div>
+
+      <div class="sell-btn-contents">
+        <%= f.submit "新規投稿する" ,class:"sell-btn" %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
+    <% end %>
   </div>
-  <% end %>
-
 </div>

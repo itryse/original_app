@@ -1,42 +1,70 @@
-<main class="main">
+<!DOCTYPE html>
+
+<html lang="ja">
   <head>
     <meta charset="UTF-8">
     <title>オリジナルアプリ</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
   </head>
+
   <body>
-      <%# <%= image_tag "dqwalk.jpeg", class:"list-pict" %>
-      <% if user_signed_in? %>
-        <div class="blackboard">
-          <p><%= "＊「こんにちは、#{current_user.nickname}さん。」" %></p>
-        </div>
-      <% else %>
-        <div class="blackboard">
-          <p>＊「こんにちは。なにをしますか？」</p>
-        </div>
-      <% end %>
-      <div class="blackboard answer float-r">
-        <% if user_signed_in? %>
-          <p><%= link_to "ちゅうだんする", destroy_user_session_path, method: :delete , class:"blink-before" %></p>
-          <p><%= link_to "とうこうする", new_post_path, class:"blink-before" %></p>
-        <% else %>
-          <p><%= link_to "ぼうけんをはじめる", new_user_registration_path, class:"blink-before" %></p>
-          <p><%= link_to "つづきからはじめる", new_user_session_path, class:"blink-before" %></p>
-        <% end %>
+    <% if user_signed_in? %>
+      <%= "＊「こんにちは、#{current_user.nickname}さん。」" %>
+    <% else %>
+      <p>＊「こんにちは。ゲストさん」</p>
+    <% end %>
+    <main class="main">
+      <div class="inner">
+          <h1 class="page-head">My Goal</h1>
+          <div class="card__wrapper">
+              <% @posts.each do |post| %>
+                <ul class="card">
+                    <%= link_to image_tag(post.image, class: :card__img), post_path(post.id) %>
+                    <li class="card__summary">
+                      <%= post.genre %><br />
+                      <%= link_to "#{post.user.nickname}" %>
+                    </li>
+                </ul>
+              <% end %>
+          </div>
       </div>
-      <%# <投稿情報はここに表示> %>
-      <div class="item-lists">
-        <% @posts.each do |post| %>
-          <ul class="item-image">
-            <%= link_to image_tag(post.image, class: :card__img), post_path(post.id) %>
-            <li class="card__body">
-              <%= post.title %><br />
-              <%= post.target_time %><br />
-              <%= post.genre %><br />
-              <%= link_to "#{post.user.nickname}" %>
-            </li>
-          </ul>
-        <% end %>
-      </div>
-      <%# <投稿情報はここに表示> %>
+    </main>
+    <footer class="footer">
+      <p class="copyright">Copyright © 2021 OriginalApp All rights reserved.</p>
+    </footer>
   </body>
-</main>
+</html>
+
+          <%# <!DOCTYPE html>
+          <html lang="ja">
+            <head>
+              <meta charset="UTF-8">
+              <title>TECH CAMP DEMO</title>
+              <link rel="stylesheet" href="./css/reset.css">
+              <link rel="stylesheet" href="./css/style.css">
+              <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
+            </head>
+            <body>
+              
+            </body> %>
+
+          <%# <%= image_tag "mohammad-alizade-fKjJYw1vOf8-unsplash.jpg", class:"list-pict" %>
+          <%# <% if user_signed_in? %>
+            <%# <div class="blackboard"> %>
+              <%# <p><%= "＊「こんにちは、#{current_user.nickname}さん。」"</p> %>
+          <%# </div> %>
+         <%# <% else %>
+            <%# <div class="blackboard">
+              <p>＊「こんにちは。ゲストさん」</p>
+            </div> %>
+          <%# <% end %>
+
+          <%# <div class="blackboard answer float-r">
+            <% if user_signed_in? %>
+              <%# <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete , class:"blink-before"</p> %>
+              <%# <p><%= link_to "新規投稿", new_post_path, class:"blink-before"</p> %>
+            <%# <% else %>
+              <%# <p><%= link_to "新規登録", new_user_registration_path, class:"blink-before"</p> %>
+              <%# <p><%= link_to "ログイン", new_user_session_path, class:"blink-before"</p> %>
+            <%# <% end %>
+          <%# </div> %>
