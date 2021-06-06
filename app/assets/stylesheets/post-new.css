@@ -11,18 +11,6 @@
   width: 600px;
 }
 
- /* 新規投稿画面の実装 */
- .page-heading {
- width: 600px;
- text-align: center;
- padding: 25px 30px;
- color: black;
- border: 2px solid black;
- border-radius: 5px;
- box-shadow: 0 0 0 5px white;
- background-color: lightpink;
-}
-
 /* 私の目標、いつまでに？を修飾 */
 .name-form {
   margin: 0 auto 10px;

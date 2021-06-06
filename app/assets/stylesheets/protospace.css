@@ -82,23 +82,6 @@ a {
   opacity: 0.5;
 }
 
-/* フォーム周り */
-.form__wrapper{
-  min-height: calc(100vh - 161px);
-}
-
-.form__text {
-  width: 70%;
-}
-
-.field{
-  margin: 10px 0;
-}
-
-.actions{
-  margin-bottom: 40px;
-}
-
 .form__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
@@ -120,16 +103,6 @@ a {
 
 /* メイン */
 
-.greeting{
-  margin-bottom: 20px;
-}
-.greeting__link{
-  text-decoration: underline;
-}
-.page-heading {
-  font-size: 30px;
-  margin-bottom: 28px;
-}
 .card__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -266,26 +239,12 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-/* フッター */
-
-.footer {
-  background-color: #999;
-  padding: 10px 0;
-}
-.copyright {
-  text-align: center;
-  color: #fff;
-  font-size: 10px;
-}
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
   .inner {
     width: 90%;
     margin: 0 auto;
-  }
-  .page-heading {
-    font-size: 24px;
   }
   .card {
     width: 48%;
@@ -300,9 +259,6 @@ a {
 @media (max-width: 599px) {
   .logo {
     width: 120px;
-  }
-  .page-heading {
-    font-size: 20px;
   }
   .card {
     width: 100%;
