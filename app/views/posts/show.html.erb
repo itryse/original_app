@@ -59,7 +59,7 @@
             <li class="comments_list">
               <%= link_to comment.user.nickname, "/users/#{comment.user_id}", class: :comment_user %>
               <%= comment.text %>
-              <%= comment.created_at %>
+              <%= comment.created_at.to_s(:datetime_jp) %>
             </li>
           <% end %>
         </ul>
