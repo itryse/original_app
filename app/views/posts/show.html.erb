@@ -32,17 +32,17 @@
       <div class="prototype__comments">
         <% if user_signed_in? %>
           <%= form_with model: [@post, @comment], local: true do |f|%>
-            <div class="field">
+            <div class="fields">
               <%= f.label :text, "コメント" %><br />
               <%= f.text_field :text %>
             </div>
-            <div class="actions">
+            <div class="action">
               <%= f.submit "送信", class: :form__btn  %>
             </div>
           <% end %> 
         <% end %>
         <ul class="comments_lists">
-          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+          
           <% @comments.each do |comment| %>
             <li class="comments_list">
               <%= link_to comment.user.nickname, "/users/#{comment.user_id}", class: :comment_user %>

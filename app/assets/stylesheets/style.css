@@ -46,6 +46,14 @@ a {
   width: 130px;
 }
 
+.nav__bts{
+  display: inline-block;
+  margin-top: 18px;
+  padding: 0.4em 1.6em;
+  font-size: 14px;
+  color: black;
+}
+
 .nav__btn{
   display: inline-block;
   margin-top: 20px;
@@ -55,7 +63,7 @@ a {
   text-decoration: none;
   user-select: none;
   border: 1px #87CEFA solid;
-  border-radius: 3px;
+  border-radius: 5px;
   transition: 0.4s ease;
 }
 
@@ -78,6 +86,10 @@ a {
 
 .actions{
   margin-bottom: 40px;
+}
+
+.action{
+  margin-bottom: 10px;
 }
 
 .form__btn{

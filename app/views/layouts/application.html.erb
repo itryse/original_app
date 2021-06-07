@@ -17,9 +17,11 @@
             <%= link_to image_tag("logo.png", class: :logo), root_path %>
           </div>
           <% if user_signed_in? %>
-            <%= "＊「こんにちは、#{current_user.nickname}さん。」" %>
+            <div class="nav__bts">
+              <%= "＊「こんにちは、#{current_user.nickname}さん。」" %>
+            </div>
           <% else %>
-            <div class="nav__btn">
+            <div class="nav__bts">
               <p>＊「こんにちは。ゲストさん」</p>
             </div>
           <% end %>
