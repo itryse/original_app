@@ -112,6 +112,8 @@ a {
 /* 詳細ページ */
 .prototype__wrapper{
   min-height: calc(100vh - 161px);
+  border: dotted;
+  margin-top: 10px;
 }
 .prototype__hedding{
   font-size: 24px;
@@ -135,7 +137,7 @@ a {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 .detail__title{
   font-size: 20px;
@@ -166,7 +168,7 @@ a {
 .prototype__comments{
   background-color: #f6f6f6;
   padding: 20px;
-  margin: 28px 0 40px 0;
+  margin: 20px 0 20px 0;
 }
 
 .comments_lists{
@@ -214,6 +216,29 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.btn_square_pop {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  background: #87CEFA;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: .4s;
+}
+
+.btn_square_pop:active {
+  background: #67c5ff;
+  color: white;
+}
+
+.iine {
+  font-size: 15px;
 }
 
 

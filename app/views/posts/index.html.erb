@@ -18,7 +18,8 @@
                     <%= link_to image_tag(post.image, class: :card__img), post_path(post.id) %>
                     <li class="card__summary">
                       <%= post.genre %><br />
-                      <%= link_to "#{post.user.nickname}" %>
+                      <%= link_to "#{post.user.nickname}" %><br />
+                      (いいね数: <%=  post.liked_users.count %>)
                     </li>
                 </ul>
               <% end %>

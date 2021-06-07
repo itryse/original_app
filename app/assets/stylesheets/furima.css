@@ -143,16 +143,20 @@
   background: lightskyblue;
   border: 1px solid lightskyblue;
   color: white;
-  width: 80%;
+  width: 70%;
   height: 50px;
   font-size: 14px;
-  margin-bottom: 4vh;
+  margin-bottom: 30px;
 }
 
 .back-btn {
   background: #aaa;
   border: 1px solid #aaa;
   color: #fff;
-  padding: 15px 35%;
+  width: 70%;
+  height: 50px;
+  font-size: 14px;
+  margin-bottom: 4vh;
+  padding: 15px 30%;
   text-decoration: none;
 }

@@ -1,9 +1,9 @@
 <div class="items-sell-contents">
   <header class="items-sell-header">
   </header>
-  <div class="items-sell-main">
-    <%= form_with model: @post, local: true do |f| %>
+  <%= form_with model: @post, local: true do |f| %>
 
+    <div class="items-sell-main">
       <div class="new-items">
 
         <div class="weight-bold-text">
@@ -34,9 +34,10 @@
       </div>
 
       <div class="sell-btn-contents">
-        <%= f.submit "新規投稿する" ,class:"sell-btn" %>
+        <%= f.submit "新規投稿" ,class:"sell-btn" %>
         <%=link_to 'もどる', root_path, class:"back-btn" %>
       </div>
-    <% end %>
-  </div>
+      
+    </div>
+  <% end %>
 </div>

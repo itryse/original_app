@@ -1,7 +1,4 @@
 /* リセットCSS */
-* {
-  box-sizing: border-box;
-}
 
 html,
 body,
@@ -135,9 +132,6 @@ a {
 }
 
 /* 詳細ページ */
-.prototype__wrapper{
-  min-height: calc(100vh - 161px);
-}
 .prototype__hedding{
   font-size: 24px;
   font-weight: bold;
@@ -149,12 +143,7 @@ a {
   margin: 0 auto;
   padding: 16px 0;
 }
-.prototype__detail{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 8px;
-}
+
 .detail__title{
   font-size: 20px;
   font-weight: bold;
@@ -179,12 +168,6 @@ a {
 .prototype__btn:hover{
   color: #fff;
   background: #999;
-}
-
-.prototype__comments{
-  background-color: #f6f6f6;
-  padding: 20px;
-  margin: 28px 0 40px 0;
 }
 
 .comments_lists{
