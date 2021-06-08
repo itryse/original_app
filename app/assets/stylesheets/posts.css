@@ -28,49 +28,8 @@
     margin: 10px 0;
    }
 
- .card__body {
-   font-size: 12px;
- }
-
  .content {
    background-color: lightblue;
    margin: 10px 0;
    font-size: 15px;
  }
-
- .registration-new-select {
-   font-size: 15px;
-   width: 33%;
-   height: 50%;
- }
-
- .registration-new-profile {
-   font-size: 15px;
-   width: 40%;
-   height: 120%;
- }
-
-.registration-new-submit {
-  width: 25%;
-  height: 30px;
-}
-
-/* トップページの写真の大きさ及びコメントの配置など */
-.item-lists {
-  position: relative;
-  display: inline-block;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 200px;
-  margin-left: 30px;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-}
-
-/* トップページのイメージの大きさの調整 */
-.card__body {
-  display: inline-block;
-  object-fit: cover;
-  width: 200px;
-  height: 200px;
-}
