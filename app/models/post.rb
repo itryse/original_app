@@ -8,4 +8,6 @@ class Post < ApplicationRecord
   validates :title, presence: true
   validates :target_time, presence: true
   validates :genre, presence: true
+
+  is_impressionable
 end

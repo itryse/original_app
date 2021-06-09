@@ -146,6 +146,11 @@ a {
 }
 
 /* 詳細ページ */
+
+.impressionist {
+  margin-top: 10px;
+}
+
 .prototype__wrapper{
   min-height: calc(100vh - 161px);
   border: dotted;
