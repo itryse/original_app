@@ -11,7 +11,13 @@
     <%= image_tag "glen-carrie-YtLAiN5YJ-8-unsplash.jpg", class:"list-pict" %>
     <main class="main">
       <div class="inner">
-          <h1 class="page-head">My Goal</h1>
+          <div class="collection">
+            <h1 class="page-head">My Goal</h1>
+            <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
+              <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+              <%= form.submit "検索", class: "search-btn" %>
+            <% end %>
+          </div>
           <div class="card__wrapper">
               <% @posts.each do |post| %>
                 <ul class="card">
