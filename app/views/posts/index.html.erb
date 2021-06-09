@@ -16,12 +16,13 @@
 
               <h1 class="page-head">My Goal</h1>
 
-              <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
-                <%# <%= f.label :genre_id_eq, 'ジャンルで検索する' %>
-                <input type="text" size="25" placeholder="キーワード検索">
-                <%= f.collection_select :genre_id_eq, Genre.all, :id, :name, {class:"search_container"} %>
-                <%= form.submit "submit", class: "search-btn" %>
-              <% end %>
+              <div>
+                <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
+                  <%# <%= f.label :genre_id_eq, 'ジャンルで検索する' %>
+                  <%= f.collection_select :genre_id_eq, Genre.all, :id, :name, {class:"search_container"} %>
+                  <%= form.submit "検索する", class: "search-btn" %>
+                <% end %>
+              </div>
 
             </div>
             <div class="card__wrapper">
