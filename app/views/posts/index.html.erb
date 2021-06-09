@@ -8,30 +8,37 @@
   </head>
 
   <body>
-    <%= image_tag "glen-carrie-YtLAiN5YJ-8-unsplash.jpg", class:"list-pict" %>
-    <main class="main">
-      <div class="inner">
-          <div class="collection">
-            <h1 class="page-head">My Goal</h1>
-            <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
-              <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
-              <%= form.submit "検索", class: "search-btn" %>
-            <% end %>
-          </div>
-          <div class="card__wrapper">
-              <% @posts.each do |post| %>
-                <ul class="card">
-                    <%= link_to image_tag(post.image, class: :card__img), post_path(post.id) %>
-                    <li class="card__summary">
-                      <%= post.genre.name %><br />
-                      <%= link_to "#{post.user.nickname}" %><br />
-                      いいね： <%=  post.liked_users.count %>
-                    </li>
-                </ul>
+    <%= search_form_for @q, url: search_posts_path do |f| %>
+      <%= image_tag "glen-carrie-YtLAiN5YJ-8-unsplash.jpg", class:"list-pict" %>
+      <main class="main">
+        <div class="inner">
+            <div class="collection">
+
+              <h1 class="page-head">My Goal</h1>
+
+              <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
+                <%# <%= f.label :genre_id_eq, 'ジャンルで検索する' %>
+                <input type="text" size="25" placeholder="キーワード検索">
+                <%= f.collection_select :genre_id_eq, Genre.all, :id, :name, {class:"search_container"} %>
+                <%= form.submit "submit", class: "search-btn" %>
               <% end %>
-          </div>
-      </div>
-    </main>
+
+            </div>
+            <div class="card__wrapper">
+                <% @posts.each do |post| %>
+                  <ul class="card">
+                      <%= link_to image_tag(post.image, class: :card__img), post_path(post.id) %>
+                      <li class="card__summary">
+                        <%= post.genre.name %><br />
+                        <%= link_to "#{post.user.nickname}" %><br />
+                        いいね： <%=  post.liked_users.count %>
+                      </li>
+                  </ul>
+                <% end %>
+            </div>
+        </div>
+      </main>
+    <% end %>
     <footer>
     </footer>
   </body>

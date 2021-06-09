@@ -12,6 +12,19 @@
   margin: 40px 40px;
 }
 
+.search_container{
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid #999;
+  display: block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  height: 2.3em;
+  width: 260px;
+  overflow: hidden;
+}
+
+
 .card {
   width: calc((100% - 50px) / 3);
   margin-bottom: 40px;

@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update, :destroy]
   impressionist :actions=> [:show]
+  before_action :search_post, only: [:index, :search]
 
   def index
     @posts = Post.order("created_at DESC")
@@ -46,10 +47,18 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @searches = @q.result
+  end
+
   private
 
   def post_params
     params.require(:post).permit(:title, :target_time, :genre_id, :image).merge(user_id: current_user.id)
+  end
+
+  def search_post
+    @q = Post.ransack(params[:q])
   end
 
 end

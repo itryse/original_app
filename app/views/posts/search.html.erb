@@ -1,0 +1,18 @@
+<% if @searches.present? %>
+  <div class="search-hit">
+    <%= "#{@searches.length}件見つかりました。" %>
+  </div>
+
+  <% @searches.each do |post| %>
+    <ul class="card">
+        <%= link_to image_tag(post.image, class: :card__img), post_path(post.id) %>
+      <li class="card__summary">
+        <%= post.genre.name %><br />
+        <%= link_to "#{post.user.nickname}" %><br />
+          いいね： <%=  post.liked_users.count %>
+      </li>
+    </ul>
+  <% end %>
+<% else %>
+  <div class="search-hit not-hit">検索結果が見つかりませんでした</div>
+<% end %>
