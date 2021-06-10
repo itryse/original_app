@@ -25,7 +25,7 @@ SQL
 
 # テーブル設計
 -----
-# users
+# usersテーブル
 
 | Column             | Type      | Options                         |
 | ------------------ | --------- | ------------------------------- |
@@ -40,7 +40,8 @@ SQL
 - has_many :posts
 - has_many :comments
 
-# posts
+## 目標投稿機能
+・postsテーブル
 | Column             | Type      | Options                         |
 | ------------------ | --------- | ------------------------------- |
 | title              | string    | null : false                    |
@@ -51,8 +52,10 @@ SQL
 # Association
 - belongs_to :user
 - has_many :comments
+- imageはActiveStorageにて実装※保存先はS3
 
-# comments
+## コメント機能
+・commentsテーブル
 | Column             | Type      | Options                         |
 | ------------------ | --------- | ------------------------------- |
 | text               | string    | null : false                    |
@@ -63,7 +66,9 @@ SQL
 - belongs_to :user
 - belongs_to :post
 
-# likes
+
+## いいね！機能
+・likesテーブル
 | Column             | Type      | Options                         |
 | ------------------ | --------- | ------------------------------- |
 | user               | reference | null : false ,foreign_key: true |
