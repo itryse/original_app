@@ -33,15 +33,10 @@ SQL
 4 投稿した写真をクリックすることで、詳細ページに遷移します。目標の具体的な内容を見ることができ、いいね！やコメントを残すことができます。また、詳細ページの閲覧数が画面左上に表示させています。またトップページに戻る際にはヘッダーのロゴをクリックすることでトップページに戻ることが可能です。
 5 投稿一覧の右上に検索ボックスを配置しました。目標ジャンルを選んで検索することで自分と同じジャンルの目標を持っている人の検索が可能です。
 
-# テーブル設計
+## テーブル設計
 
-## ユーザー管理機能
+### ユーザー管理機能
 ・usersテーブル
-=======
-# テーブル設計
------
-# users
-
 | Column             | Type      | Options                         |
 | ------------------ | --------- | ------------------------------- |
 | nickname           | string    | null : false                    |
@@ -51,12 +46,12 @@ SQL
 | age_id             | integer   | null : false                    |
 | profile            | text      | null : false                    |
 
-# Association
+### Association
 - has_many :posts
 - has_many :comments
 - has_many :likes
 
-## 目標投稿機能
+### 目標投稿機能
 ・postsテーブル
 | Column             | Type      | Options                         |
 | ------------------ | --------- | ------------------------------- |
@@ -65,13 +60,13 @@ SQL
 | genre_id           | string    | null : false                    |
 | user               | reference | null : false ,foreign_key: true |
 
-# Association
+### Association
 - belongs_to :user
 - has_many :comments
 - has_many :likes
 - imageはActiveStorageにて実装※保存先はS3
 
-## コメント機能
+### コメント機能
 ・commentsテーブル
 | Column             | Type      | Options                         |
 | ------------------ | --------- | ------------------------------- |
@@ -79,22 +74,17 @@ SQL
 | user               | reference | null : false ,foreign_key: true |
 | post               | reference | null : false ,foreign_key: true |
 
-# Association
+### Association
 - belongs_to :user
 - belongs_to :post
 
-
-
-## いいね！機能
+### いいね！機能
 ・likesテーブル
-=======
-# likes
-
 | Column             | Type      | Options                         |
 | ------------------ | --------- | ------------------------------- |
 | user               | reference | null : false ,foreign_key: true |
 | post               | reference | null : false ,foreign_key: true |
 
-# Association
+### Association
 - belongs_to :user
 - belongs_to :post
