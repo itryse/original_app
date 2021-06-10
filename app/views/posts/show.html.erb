@@ -16,9 +16,9 @@
         <div class="prototype__detail">
           <div class="iine">いいね数: <%= @post.likes.count %></div>
           <% if current_user.already_liked?(@post) %>
-            <%= button_to 'いいねを取り消す', post_like_path(@post), method: :delete, class: :form__btn %>
+            <%= button_to 'いいね👍を取り消す', post_like_path(@post), method: :delete, class: :form__btn %>
           <% else %>
-            <%= button_to 'いいね', post_likes_path(@post), class: :form__btn %>
+            <%= button_to 'いいね👍', post_likes_path(@post), class: :form__btn %>
           <% end %>
         </div>
       </div>
