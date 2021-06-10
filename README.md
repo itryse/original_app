@@ -1,3 +1,6 @@
+
+=======
+# Shoot!:soccer:
 # 概要
 各々が持っている目標を宣言、共有して達成に向けてモチベーションを維持するためのアプリケーションです。
 
@@ -34,6 +37,11 @@ SQL
 
 ## ユーザー管理機能
 ・usersテーブル
+=======
+# テーブル設計
+-----
+# users
+
 | Column             | Type      | Options                         |
 | ------------------ | --------- | ------------------------------- |
 | nickname           | string    | null : false                    |
@@ -76,8 +84,12 @@ SQL
 - belongs_to :post
 
 
+
 ## いいね！機能
 ・likesテーブル
+=======
+# likes
+
 | Column             | Type      | Options                         |
 | ------------------ | --------- | ------------------------------- |
 | user               | reference | null : false ,foreign_key: true |
