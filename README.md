@@ -21,7 +21,7 @@ S3
 https://original-app-35590.herokuapp.com/
 
 ## テスト用アカウント
-ユーザー名：test@gmail.com
+ユーザー名：test@gmail.com/
 パスワード：111111
 
 ## 利用方法
