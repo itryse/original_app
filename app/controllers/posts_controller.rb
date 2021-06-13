@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update, :destroy]
-  impressionist :actions=> [:show]
+  before_action :set_post, only: [:show, :edit, :update]
   before_action :search_post, only: [:index, :search]
+  impressionist :actions=> [:show]
 
   def index
     @posts = Post.order("created_at DESC")
@@ -21,7 +22,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    post = Post.find(params[:id])
     impressionist(@post, nil, unique: [:session_hash])
     @comment = Comment.new
     @like = Like.new
@@ -29,11 +30,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
     if @post.update(post_params)
       redirect_to post_path(@post)
     else
@@ -59,6 +58,10 @@ class PostsController < ApplicationController
 
   def search_post
     @q = Post.ransack(params[:q])
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 
 end

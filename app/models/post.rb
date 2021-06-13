@@ -2,12 +2,17 @@ class Post < ApplicationRecord
   belongs_to :user
   has_many :comments
   has_one_attached :image
-  has_many :likes
+  has_many :likes, dependent: :destroy
   has_many :liked_users, through: :likes, source: :user
 
-  validates :title,       presence: true
-  validates :target_time, presence: true
-  validates :genre_id,   numericality: { other_than: 1 }
+  with_options presence: true do
+    validates :title
+    validates :target_time
+  end
+
+  with_options numericality: { other_than: 1 } do
+    validates :genre_id
+  end
 
   is_impressionable
 
