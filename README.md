@@ -30,9 +30,36 @@ https://original-app-35590.herokuapp.com/
 パスワード：111111
 
 ## デモ画面
-ログイン前 1/2
+ログイン前 ①（トップページ上段）
 https://i.gyazo.com/70c4256d8390bdf6a3b9a2d61b80b44f.jpg
-c0f7bd5e24640a3bbe32e55d322092fb.mp4
+
+ログイン前 ②（トップページ下段：投稿一覧）
+https://i.gyazo.com/1d8053af79c84fd4d3080b8d154577a8.jpg
+
+ユーザー新規登録画面
+https://i.gyazo.com/d280c421fdcc5b38628f03ec965bbf3d.png
+
+ユーザーログイン画面
+https://i.gyazo.com/caae50d2f41ed97252d5fb83bd16baee.png
+
+新規投稿画面
+https://i.gyazo.com/273ca48e0101d4aa2f7c42c0e36d0a81.png
+
+投稿詳細画面 ①（ユーザー=投稿者 ※編集、削除ボタン有）
+https://i.gyazo.com/c11715be9ce5583e9ea86ec42a6ad388.png
+
+投稿詳細画面 ②（ユーザー≠投稿者 ※編集、削除ボタン無）
+https://i.gyazo.com/18db70ef29bbca5e29fca8abf8227dc2.jpg
+
+投稿詳細画面 ③（いいね、コメント機能）
+https://i.gyazo.com/956e5d56922f86a856805f92e81232f4.jpg
+
+検索結果画面（該当あり）
+https://i.gyazo.com/18d687752552d0b34e7f5834d413f2c7.jpg
+
+検索結果画面（該当なし）
+https://i.gyazo.com/3df6bb96d4b0eb56899fdc79a956361b.png
+
 
 ## 利用方法
 1 アクセスするとトップページへ遷移します。
