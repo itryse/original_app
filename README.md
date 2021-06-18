@@ -30,7 +30,9 @@ https://original-app-35590.herokuapp.com/
 パスワード：111111
 
 ## デモ画面
+ログイン前 1/2
 https://i.gyazo.com/70c4256d8390bdf6a3b9a2d61b80b44f.jpg
+c0f7bd5e24640a3bbe32e55d322092fb.mp4
 
 ## 利用方法
 1 アクセスするとトップページへ遷移します。
